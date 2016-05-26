@@ -56,10 +56,6 @@ GEM
     ffi (1.9.10)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
-    guard-compat (1.2.1)
-    guard-minitest (2.4.4)
-      guard-compat (~> 1.2)
-      minitest (>= 3.0)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -94,7 +90,6 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
-    pg (0.18.4)
     puma (3.4.0)
     rack (2.0.0.rc1)
       json
@@ -174,13 +169,11 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
-  guard-minitest
   jbuilder (~> 2.0)
   jquery-rails
   listen (~> 3.0.5)
   mini_backtrace
   minitest-reporters
-  pg
   puma (~> 3.0)
   rails (>= 5.0.0.rc1, < 5.1)
   sass-rails (~> 5.0)
