@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'pry'
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
   gem 'sqlite3'
@@ -50,6 +50,10 @@ group :production do
 end
 
 group :development do
+  gem 'guard'
+  gem 'guard-rails'
+  gem 'guard-minitest'
+  gem 'guard-bundler'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   
