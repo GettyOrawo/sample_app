@@ -213,6 +213,7 @@ DEPENDENCIES
   mini_backtrace
   minitest-reporters
   pg
+  pry
   puma (~> 3.0)
   rails (>= 5.0.0.rc1, < 5.1)
   sass-rails (~> 5.0)
