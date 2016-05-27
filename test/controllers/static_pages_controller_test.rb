@@ -27,7 +27,20 @@ test "should get about" do
   test "should get contact" do
     get :contact
     assert_response :success
-    assert_select "title", "Contact | Ruby on Rails Tutorial Sample App"
+    assert_select "title", "Contact | #{@base_title}"
+  end
+
+  test "should get resume" do
+    get :contact
+    assert_response :success
+    assert_select "title", "Resume | #{@base_title}"
+    assert_select "p", "Persona Details"
+    assert_select "h1", "hard working"
+    assert_select "h2", "Education"
+    assert_select "h3", "e-mail"
+    assert_select "h4", "my contact"
+    assert_select "h5", "punctual"
+    assert_select "h6", "believe"
   end
 end
  
