@@ -13,9 +13,9 @@ resize: vertical;
 }
 .center {
 text-align: center;
-}
-.center h1 {
+h1 {
 margin-bottom: 10px;
+}
 }
 /* typography */
 
@@ -28,27 +28,45 @@ letter-spacing: -2px;
 margin-bottom: 30px;
 text-align: center;
 }
+/* logo */
+#logo {
+float: left;
+margin-right: 10px;
+font-size: 1.7em;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: -1px;
+padding-top: 9px;
+font-weight: bold;
+
+&:hover {
+color: #fff;
+text-decoration: none;
+}
+}
 /* footer */
 footer {
 margin-top: 45px;
 padding-top: 5px;
 border-top: 1px solid #eaeaea;
 color: #777;
-}
-footer a {
+
+a {
 color: #555;
 }
-footer a:hover {
+a:hover {
 color: #222;
 }
-footer small {
+small {
 float: left;
 }
-footer ul {
+ul {
 float: right;
 list-style: none;
-}
-footer ul li {
+
+li {
 float: left;
 margin-left: 15px;
+}
+}
 }
