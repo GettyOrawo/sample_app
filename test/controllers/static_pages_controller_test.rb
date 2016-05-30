@@ -35,13 +35,12 @@ test "should get about" do
     get :resume
     assert_response :success
     assert_select "title", "Resume | #{@base_title}"
-    assert_select "p", "Persona Details"
-    assert_select "h1", "hard working"
-    assert_select "h2", "Education"
+    assert_select "h1", "ORAWO GETTY ANYANGO"
+    assert_select "h2", "Mail"
     assert_select "h3", "e-mail"
-    assert_select "h4", "to present"
-    assert_select "h5", "Design"
-    assert_select "h6", "Computer"
+    assert_select "h4", "2013 to present"
+    assert_select "h5", "Computer Technology Project"
+    assert_select "h6", "Design of an Automatic Light Sensor System"
   end
 end
  
