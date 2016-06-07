@@ -26,6 +26,7 @@ assert_select "a[href=?]", user_path(@user)
 delete logout_path
 assert_not is_logged_in?
 assert_redirected_to root_url
+delete logout_path
 follow_redirect!
 assert_select "a[href=?]", login_path
 assert_select "a[href=?]", logout_path, count: 0

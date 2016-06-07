@@ -36,8 +36,12 @@ end
 
 
 	test "email validation should reject invalid addresses" do
-		invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
-							foo@bar_baz.com foo@bar+baz.com foo@bar..com]
+		invalid_addresses = %w[ user@example,com 
+								user_at_foo.org 
+								user.name@example. 
+								foo@bar_baz.com 
+								foo@bar+baz.com ]
+
 		invalid_addresses.each do |invalid_address|
 			@user.email = invalid_address
 			assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
@@ -61,5 +65,8 @@ end
 	test "password should have a minimum length" do
 		@user.password = @user.password_confirmation = "a" * 5
 		assert_not @user.valid?
+	end
+		test "authenticated? should return false for a user with nil digest" do
+		assert_not @user.authenticated?('')
 	end
 end
