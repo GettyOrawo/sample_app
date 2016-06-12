@@ -50,5 +50,11 @@ end
 	delete :destroy, id: @user
 	end
 	assert_redirected_to root_url
-end
+	end
+	test "should not allow admin attributes to be edited through the web"
+	log_in_as(@other_user)
+	assert_not @other_user.admin?
+	patch :update id: @other_user, user: { password: FIIL_IN, password_confirmation: FILL_IN, admin: FILL_IN }
+	assert_not @other_user.FILL_IN.admin?
+	end
 end
