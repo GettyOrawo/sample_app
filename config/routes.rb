@@ -11,4 +11,5 @@ post 'login' => 'sessions#create'
 delete 'logout' => 'sessions#destroy'
 resources :users
 resources :microposts,	only: [:create, :destroy]
+resources :account_activations, only: [:edit]
 end
