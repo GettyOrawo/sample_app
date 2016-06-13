@@ -19,7 +19,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
 	assert_select 'div#error_explanation'
 	# Valid submission
 	content = "This micropost really ties the room together"
-	picture = fixture_file_upload('test/fixtures/rails.png', 'image/png')
+	picture = fixture_file_upload('test/fixtures/rails.jpeg', 'image/jpeg')
 	assert_difference 'Micropost.count', 1 do
 		post microposts_path, micropost: { content: content, picture: picture }
 	end
