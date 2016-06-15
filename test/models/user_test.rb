@@ -67,10 +67,6 @@ end
 		assert_not @user.valid?
 	end
 
-	#test "authenticated? should return false for a user with nil digest" do
-	#	assert_not @user.authenticated?('')
-	#end
-
 	test "associated microposts should be destroyed" do
 		@user.save
 		@user.microposts.create!(content: "Lorem ipsum")
