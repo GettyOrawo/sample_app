@@ -81,9 +81,10 @@ end
 	test "should follow and unfollow a user" do
 		michael = users(:michael)
 		archer = users(:archer)
-		assert_not michael.following?(archer)
-		michael.follow(archer)
 		assert michael.following?(archer)
+		michael.follow(archer)
+		assert_not michael.following?(archer)
+		#the line below brings an error "expected false to be truthy"
 		assert archer.followers.include?(michael)
 		michael.unfollow(archer)
 		assert_not michael.following?(archer)

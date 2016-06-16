@@ -7,7 +7,7 @@ class RelationshipTest < ActiveSupport::TestCase
 
 	test "should be valid" do 
 		#removed this assert so that my tests would run error was like "expected false to be truthy. I dont know what that means"
-		#assert
+		#assert 
 		@relationship.valid?
 	end
 
