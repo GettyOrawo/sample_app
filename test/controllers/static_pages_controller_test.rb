@@ -36,8 +36,10 @@ test "should get about" do
     assert_response :success
     assert_select "title", "Resume | #{@base_title}"
     assert_select "h1", "ORAWO GETTY ANYANGO"
+    assert_select "h3", /getty/i 
     assert_select "h2", "Mail"
     assert_select "h3", "e-mail"
+    assert_select "h3", /mail/i 
     assert_select "h4", "2013 to present"
     assert_select "h5", "Computer Technology Project"
     assert_select "h6", "Design of an Automatic Light Sensor System"

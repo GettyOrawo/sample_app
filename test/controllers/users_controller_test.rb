@@ -28,6 +28,7 @@ class UsersControllerTest < ActionController::TestCase
 		log_in_as(@other_user)
 		get :edit, id: @user
 		assert flash.empty?
+		#assert_not flash.empty?
 		assert_redirected_to root_url
 	end
 
